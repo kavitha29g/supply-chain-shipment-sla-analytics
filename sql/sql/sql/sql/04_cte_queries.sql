@@ -27,3 +27,11 @@ ranked_carriers AS ( SELECT carrier_id, sla_compliance_percentage,
     FROM sla_percentage)
 SELECT carrier_id, sla_compliance_percentage FROM ranked_carriers
 WHERE rank_no = 2;
+
+#23. Create a CTE to identify customers whose total spending is greater than the average customer spending. 
+
+with cte as (select customer_id, sum(order_value) as total_spending  from orders
+  group by customer_id)
+  select * from cte 
+  where total_spending > (select avg(total_spending) from cte)  ;
+
