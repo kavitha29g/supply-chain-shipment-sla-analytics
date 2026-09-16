@@ -121,9 +121,7 @@ supply-chain-shipment-sla-analytics/
 
 ![Delivery SLA](screenshots/04_delivery_sla.png)
 
-### Shipment Performance View
 
-![Shipment Performance View](screenshots/05_view_output.png)
 
 ## 🎯 Project Objective
 
